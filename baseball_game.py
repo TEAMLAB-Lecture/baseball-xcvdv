@@ -92,7 +92,7 @@ def is_duplicated_number(three_digit):
     three_digit_int = three_digit_int % 100
     second_num = three_digit_int // 10
     third_num = three_digit_int % 10
-    result = (not first_num is second_num and not second_num is third_num and not first_num is third_num)
+    result = (first_num is second_num or second_num is third_num or first_num is third_num)
     # ==================================
     return result
 
@@ -120,7 +120,7 @@ def is_validated_number(user_input_number):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = is_digit(user_input_number) and is_between_100_and_999(user_input_number) and is_duplicated_number(user_input_number)
+    result = is_digit(user_input_number) and is_between_100_and_999(user_input_number) and not is_duplicated_number(user_input_number)
     # ==================================
     return result
 
