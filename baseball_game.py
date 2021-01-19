@@ -280,6 +280,8 @@ def main():
                 print("Wrong Input, Input again")
                 user_input = input("You win, one more(Y/N) ?")
             if is_yes(user_input):
+                random_number = str(get_not_duplicated_three_digit_number())
+                print("Random Number is : ", random_number)
                 continue
             else :
                 break
